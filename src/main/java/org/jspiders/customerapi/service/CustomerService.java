@@ -32,6 +32,7 @@ public class CustomerService {
     public List<Customer> getByCustomerName(String name){
         return repository.findByCustomerName(name);
     }
+    
     //get customer by email
     public List<Customer> getByCustomerEmail(String email){
         return repository.findByCustomerEmail(email);
@@ -57,12 +58,10 @@ public class CustomerService {
        return repository.findByCustomerAgeBetween(age1,age2);
     }
 
-    //returns customer name with JPQL
     public List<Customer> viewCustomers(String name){
         return repository.viewCustomers(name);
     }
 
-    //Write JPQL to fetch customer names having age<? and amt>=?
     public List<String> showCustomerName(int age, double amt){
         return repository.showCustomerName(age,amt);
     }
